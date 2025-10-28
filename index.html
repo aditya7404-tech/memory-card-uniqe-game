@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Memory Card Game</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- Start Screen with Box -->
+  <div id="startScreen">
+    <div class="container-box">
+      <h1>🎴 Memory Card Game</h1>
+      <div>
+        <label>Level:</label>
+        <select id="levelSelect">
+          <option value="easy">Easy</option>
+          <option value="medium">Medium</option>
+          <option value="hard">Hard</option>
+        </select>
+        <label>Grid:</label>
+        <select id="gridSelect">
+          <option value="4">4 × 4</option>
+          <option value="6">6 × 6</option>
+        </select>
+      </div>
+      <button id="playBtn">Play Game</button>
+    </div>
+  </div>
+
+  <!-- Game Screen -->
+  <div id="gameScreen">
+    <div id="info">
+      <span id="moves">Moves: 0</span> |
+      <span id="timer">Time: 0s</span>
+    </div>
+    <div id="gameBoard"></div>
+  </div>
+
+  <!-- Overlay Popup -->
+  <div id="overlay">
+    <div id="messageBox">
+      <h2 id="resultText">🎉 You Win!</h2>
+      <p id="stats"></p>
+      <button id="playAgain">Play Again</button>
+    </div>
+  </div>
+<script src="engine.js"></script>
+</body>
+</html>
